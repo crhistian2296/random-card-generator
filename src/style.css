@@ -1,1 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0e7e12;
+  font-size: 7rem;
+}
