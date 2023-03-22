@@ -40,9 +40,14 @@ function suiteColor(char) {
   }
 }
 
-window.onload = function() {
+function shuffle() {
   cardNumber.textContent = card();
   cardSuit.textContent = suit();
   cardSuit2.textContent = cardSuit.innerText;
   suiteColor(cardSuit.textContent);
+}
+
+window.onload = function() {
+  shuffle();
+  setInterval(() => shuffle(), 2000);
 };
