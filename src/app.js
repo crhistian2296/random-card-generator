@@ -7,7 +7,6 @@ import "./assets/img/4geeks.ico";
 
 const cardValues = [
   "A",
-  "1",
   "2",
   "3",
   "4",
@@ -31,8 +30,19 @@ const cardNumber = document.querySelector(".cardNumber");
 const cardSuit = document.querySelectorAll(".cardSuit")[0];
 const cardSuit2 = document.querySelectorAll(".cardSuit")[1];
 
+function suiteColor(char) {
+  if (char === "♣" || char === "♠") {
+    cardSuit.style.color = "black";
+    cardSuit2.style.color = "black";
+  } else {
+    cardSuit.style.color = "red";
+    cardSuit2.style.color = "red";
+  }
+}
+
 window.onload = function() {
   cardNumber.textContent = card();
   cardSuit.textContent = suit();
   cardSuit2.textContent = cardSuit.innerText;
+  suiteColor(cardSuit.textContent);
 };
